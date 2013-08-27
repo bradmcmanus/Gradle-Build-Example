@@ -74,6 +74,11 @@ android {
 // writes it to a resource file. This overrides the default from src/main, which the AndroidManifest
 // picks up in the maps key meta-data tag.
 // See: https://developers.google.com/maps/documentation/android/start#the_google_maps_api_key
+//
+// UPDATE: You can actually specify a set of packageName/signing-key pairs for a given Google Maps v2 API
+// key. In lieu of this fact, I would recommend updating your Google Maps v2 key to support any new
+// packageName/signing-key pair you introduce. The example remains, however, for other components that
+// may benefit this strategy.
 def overrideMapsKey(buildVariant) {
     def mapsKeyDictionary
     // The following code operates on the assumption that release builds are built using your
